@@ -1,0 +1,19 @@
+#version link: https://cdn.stubdownloader.services.mozilla.com/builds/firefox-latest-ssl/vi/osx/f73057584d492812e8523cf1f3075e3ccb69195ebe01dc47e2f41076943d6615/Firefox%20158.0.1.dmg
+#universal link: https://www.firefox.com/vi/thanks/
+
+# -----
+Description: Download firefox 158.0.1
+Identifier: github.com.Thien1n.Mac.Recipe.Download.Firefox.158.0.1
+
+Input:
+  NAME: Firefox-mac
+
+MinimumVersion: 1.0.0
+
+Processors:
+  - Processor: com.github.jgstew.SharedProcessors/URLDownloaderPython
+    Arguments:
+      url: https://cdn.stubdownloader.services.mozilla.com/builds/firefox-latest-ssl/vi/osx/f73057584d492812e8523cf1f3075e3ccb69195ebe01dc47e2f41076943d6615/Firefox%20158.0.1.dmg
+      filename: Firefox-mac.dmg
+      COMPUTE_HASHES: true
+  - Processor: EndOfCheckPhase
